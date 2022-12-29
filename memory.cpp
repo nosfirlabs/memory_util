@@ -70,7 +70,8 @@ BOOL WriteMemory(ULONG ProcessId, ULONG64 Address, SIZE_T Size, PVOID Buffer)
 
     if (!DeviceIoControl(hDevice, IOCTL_WRITE_MEMORY, &data, sizeof(data), &data, sizeof(data), &dwBytesReturned, NULL))
         return FALSE;
-        
+    return TRUE;
+}
 
 int main()
 {
