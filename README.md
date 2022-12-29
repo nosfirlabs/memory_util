@@ -1,5 +1,7 @@
 # memory_util
 
+use this driver in combination with https://github.com/optiv/Mangle
+
 This code defines two device IOCTL codes for reading and writing memory, and implements functions for opening and closing the device, as well as reading and writing memory to a specific process. The main function first opens the device, then finds the process ID of the target process using the CreateToolhelp32Snapshot and Process32First/Process32Next functions. It then uses the ReadMemory and WriteMemory functions to read and write memory to the target process. Finally, it closes the device when it is finished.
 
 This is just a simple example and does not include any measures to evade anti-cheat measures.
